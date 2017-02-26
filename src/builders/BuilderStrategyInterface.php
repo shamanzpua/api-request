@@ -1,6 +1,6 @@
 <?php
 
-namespace shamanzpua\apirequest\request\builders;
+namespace shamanzpua\apirequest\builders;
 
 /**
  * Strategy for building request

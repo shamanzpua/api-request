@@ -1,7 +1,7 @@
 <?php
-namespace shamanzpua\apirequest\request\builders;
+namespace shamanzpua\apirequest\builders;
 
-use shamanzpua\apirequest\request\RequestConfigInterface;
+use shamanzpua\apirequest\RequestConfigInterface;
 
 /**
  * Abstract request class
@@ -62,6 +62,17 @@ abstract class AbstractRequestBuilder
 
     /**
      * Get array of allowed query params
+     * 
+     *  Example of return array: 
+     * <pre>
+     * <code>
+     *      return [
+     *          'key' => []   //any param 'key'     
+     *          'order' => ['asc', 'desc']   //onle 'asc' or 'desc' allowed for param 'key'             
+     *      ];  
+     * <code>
+     * <pre>
+     * 
      * @return array
      */
     public function getAllowedQueryParams()
@@ -71,6 +82,17 @@ abstract class AbstractRequestBuilder
 
     /**
      * Get array of allowed body params
+     * 
+     *  Example of return array: 
+     * <pre>
+     * <code>
+     *      return [
+     *          'key' => []   //any param 'key'     
+     *          'order' => ['asc', 'desc']   //onle 'asc' or 'desc' allowed for param 'key'             
+     *      ];  
+     * <code>
+     * <pre>
+     * 
      * @return array
      */
     public function getAllowedBodyParams()
@@ -80,6 +102,17 @@ abstract class AbstractRequestBuilder
 
     /**
      * Get array of allowed path params
+     * 
+     *  Example of return array: 
+     * <pre>
+     * <code>
+     *      return [
+     *          'key' => []   //any param 'key'     
+     *          'order' => ['asc', 'desc']   //onle 'asc' or 'desc' allowed for param 'key'             
+     *      ];  
+     * <code>
+     * <pre>
+     * 
      * @return array
      */
     public function getAllowedPathParams()
@@ -89,6 +122,17 @@ abstract class AbstractRequestBuilder
 
     /**
      * Get array of path params
+     * 
+     * Example of return array: 
+     * <pre>
+     * <code>
+     *      return [
+     *          'body' => [], //no require params for body
+     *          'path' => ['id'],  //param id require in path
+     *          'query' => [], //no require params for query
+     *      ];  
+     * </code>
+     * </pre>
      * @return array
      */
     public function getRequiredParams()

@@ -1,7 +1,7 @@
 <?php
-namespace shamanzpua\apirequest\request\builders;
+namespace shamanzpua\apirequest\builders;
 
-use shamanzpua\apirequest\request\builders\BuilderStrategyInterface;
+use shamanzpua\apirequest\builders\BuilderStrategyInterface;
 
 /**
  * Context request builder

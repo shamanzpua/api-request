@@ -1,5 +1,6 @@
 <?php
-namespace shamanzpua\apirequest\request;
+
+namespace shamanzpua\apirequest;
 
 /**
  * interface for

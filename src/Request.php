@@ -1,8 +1,8 @@
 <?php
 namespace shamanzpua\apirequest\request;
 
-use shamanzpua\apirequest\request\builders\ContextRequestBuilder;
-use shamanzpua\apirequest\request\RequestInterface;
+use shamanzpua\apirequest\builders\ContextRequestBuilder;
+use shamanzpua\apirequest\RequestInterface;
 use GuzzleHttp\Client;
 
 /**
