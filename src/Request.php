@@ -1,5 +1,5 @@
 <?php
-namespace shamanzpua\apirequest\request;
+namespace shamanzpua\apirequest;
 
 use shamanzpua\apirequest\builders\ContextRequestBuilder;
 use shamanzpua\apirequest\RequestInterface;
