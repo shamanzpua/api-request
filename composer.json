@@ -1,6 +1,8 @@
 {
     "name": "shamanzpua/apirequest",
     "description": "base for api requests",
+    "keywords": ["request", "api", "http", "curl"],
+    "license": "BSD-3-Clause",
     "require": {
         "guzzlehttp/guzzle": "^6.2"
     },
