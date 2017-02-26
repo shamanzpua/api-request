@@ -14,7 +14,7 @@ Add to composer.json
 
 #### Create new custom class Builder:
 
-```
+```php
 <?php
 
 namespace components\request\builders;
@@ -61,7 +61,7 @@ class ExampleBuilder extends AbstractRequestBuilder implements BuilderStrategyIn
 
 #### Use in code:
 
-````
+````php
 <?php
 
 use shamanzpua\apirequest\RequestConfig;
