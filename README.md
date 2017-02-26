@@ -71,10 +71,9 @@ use components\request\builders\ExampleBuilder;
 
 
 $queryParams = [
-            'q' => $search,
-            'key' => $this->apiKey,
-            'site' => 'stackoverflow',
-        ];
+    'q' => $search,
+    'key' => $this->apiKey
+];
 
 $requestConfig = new RequestConfig();
 $requestConfig
