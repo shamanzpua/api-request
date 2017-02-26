@@ -6,8 +6,10 @@
     "require": {
         "guzzlehttp/guzzle": "^6.2"
     },
-    "psr-4": {
-        "shamanzpua\\apirequest\\": "src/"
+    "autoload": {
+        "psr-4": {
+            "shamanzpua\\apirequest\\": "src/"
+        }
     },
     "authors": [
         {
