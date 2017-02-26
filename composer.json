@@ -1,0 +1,16 @@
+{
+    "name": "shamanzpua/apirequest",
+    "description": "base for api requests",
+    "require": {
+        "guzzlehttp/guzzle": "^6.2"
+    },
+    "psr-4": {
+        "shamanzpua\\apirequest\\": "src/"
+    },
+    "authors": [
+        {
+            "name": "shamanzp",
+            "email": "yura224k@gmail.com"
+        }
+    ]
+}
