@@ -243,4 +243,39 @@ abstract class AbstractRequestBuilder
     {
         return $this->query;
     }
+    
+    /**
+     * Build path
+     *
+     * @return $this
+     */
+    public function buildPath()
+    {
+        if (!empty($this->pathParams)) {
+            foreach ($this->pathParams as $param => $value) {
+                $this->api = str_replace($param, $value, $this->api);
+            }
+        }
+        return $this;
+    }
+    
+    /**
+     * Build query string
+     *
+     * @return $this
+     */
+    public function buildQuery()
+    {
+        if (!empty($this->queryParams)) {
+            $this->query = "?". http_build_query($this->queryParams);
+        }
+        return $this;
+    }
+    /**
+     * Create final request query
+     */
+    public function create()
+    {
+        $this->query = $this->baseUrl.$this->api.$this->query;
+    }
 }
