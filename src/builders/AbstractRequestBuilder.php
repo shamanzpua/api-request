@@ -253,7 +253,7 @@ abstract class AbstractRequestBuilder
     {
         if (!empty($this->pathParams)) {
             foreach ($this->pathParams as $param => $value) {
-                $this->api = str_replace($param, $value, $this->api);
+                $this->api = str_replace("{".$param."}", $value, $this->api);
             }
         }
         return $this;
