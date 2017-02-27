@@ -67,26 +67,38 @@ class ExampleBuilder extends AbstractRequestBuilder implements BuilderStrategyIn
 use shamanzpua\apirequest\RequestConfig;
 use shamanzpua\apirequest\Request;
 use shamanzpua\apirequest\builders\ContextRequestBuilder;
+use shamanzpua\apirequest\Api;
 use components\request\builders\ExampleBuilder;
 
+/**
+ * Example api class
+ */
+class ExampleApi extends Api
+{
+    /**
+     * Api baseurl
+     */
+    protected $apiBaseUrl = 'https://api.example.com';
 
-$queryParams = [
-    'q' => $search,
-    'key' => $this->apiKey
-];
+    /**
+     * Configure, build and send request to example api
+     */
+    public function apiExample($search)
+    {
+        $queryParams = [
+            'q' => $search,
+        ];
 
-$requestConfig = new RequestConfig();
-$requestConfig
-    ->setBaseUrl($this->apiBaseUrl)
-    ->setHttpMethod(RequestConfig::HTTP_METHOD_GET)
-    ->setQueryParams($queryParams);
+        $requestConfig = $this->createConfigurator(RequestConfig::class);
+        $requestConfig->setHttpMethod(RequestConfig::HTTP_METHOD_GET)
+            ->setQueryParams($queryParams);
 
-$request = new Request(
-    new ContextRequestBuilder(new ExampleBuilder($requestConfig))
-);
-$response = $request->send()->getResonseData();
-
-
+        $request = new Request(
+            new ContextRequestBuilder(new ExampleBuilder($requestConfig))
+        );
+        return $request->send()->getResonseData();
+    }
+}
 
 
 
