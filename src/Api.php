@@ -46,7 +46,7 @@ abstract class Api implements ApiInterface
         }
         $configurator = new $className();
         if ($configurator instanceof RequestConfigInterface) {
-            return $congigurator->getBaseUrl($this->getBaseUrl());
+            return $configurator->getBaseUrl($this->getBaseUrl());
         }
         
         throw new Exception($className . " is not implements RequestConfigInterface");
