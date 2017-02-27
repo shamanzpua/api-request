@@ -7,7 +7,7 @@ Template for different api requests.
 Add to composer.json
 ````
  "require": {
-    "shamanzpua/apirequest": "1.3"
+    "shamanzpua/apirequest": "*"
  }
 ````
 ## Usage
