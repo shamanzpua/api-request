@@ -39,7 +39,7 @@ abstract class Api implements ApiInterface
      * @return RequestConfigInterface
      * @throws Exception
      */
-    protected function createConfigurator($className)
+    public function createConfigurator($className)
     {
         if (!class_exists($className)) {
             throw new Exception($className . " class does not exist");
@@ -58,7 +58,7 @@ abstract class Api implements ApiInterface
      * @param shamanzpua\apirequest\RequestInterface $request
      * @return RequestInterface
      */
-    protected function sendRequest(RequestInterface $request)
+    public function sendRequest(RequestInterface $request)
     {
         return $request->send()->getResonseData();
     }
@@ -69,7 +69,7 @@ abstract class Api implements ApiInterface
      * @param shamanzpua\apirequest\builders\BuilderStrategyInterface $builder
      * @return ContextRequestBuilder
      */
-    protected function createBuilder(BuilderStrategyInterface $builder)
+    public function createBuilder(BuilderStrategyInterface $builder)
     {
         return new ContextRequestBuilder($builder);
     }
