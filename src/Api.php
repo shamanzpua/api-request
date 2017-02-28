@@ -4,6 +4,7 @@ namespace shamanzpua\apirequest;
 use shamanzpua\apirequest\RequestConfigInterface;
 use shamanzpua\apirequest\ApiInterface;
 use shamanzpua\apirequest\builders\BuilderStrategyInterface;
+use shamanzpua\apirequest\builders\ContextRequestBuilder;
 
 /**
  * Stackechchange api class
