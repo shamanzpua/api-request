@@ -3,6 +3,7 @@ namespace shamanzpua\apirequest;
 
 use shamanzpua\apirequest\RequestConfigInterface;
 use shamanzpua\apirequest\ApiInterface;
+use shamanzpua\apirequest\builders\BuilderStrategyInterface;
 
 /**
  * Stackechchange api class
