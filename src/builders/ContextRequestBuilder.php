@@ -45,11 +45,11 @@ class ContextRequestBuilder
      *
      * @return array
      */
-    
     public function getOptions()
     {
         return $this->buildStartegy->getOptions();
     }
+    
     /**
      * Get query of BuilderStrategyInterface instance
      *

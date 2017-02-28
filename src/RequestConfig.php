@@ -90,7 +90,7 @@ class RequestConfig implements RequestConfigInterface
     /**
      * @inheritdoc
      */
-    public function setParams($params, $method)
+    protected function setParams($params, $method)
     {
         if (empty($params)) {
             return $this;

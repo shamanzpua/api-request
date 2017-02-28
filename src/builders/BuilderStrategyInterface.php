@@ -1,29 +1,9 @@
 <?php
-
 namespace shamanzpua\apirequest\builders;
 
 /**
  * Strategy for building request
  */
-interface BuilderStrategyInterface
+interface BuilderStrategyInterface extends BuildInterface, RequestComponentInterface
 {
-    /**
-     * Build request
-     */
-    public function build();
-    
-    /**
-     * Get http method
-     */
-    public function getMethod();
-    
-    /**
-     * Get http options
-     */
-    public function getOptions();
-    
-    /**
-     * Get request query string
-     */
-    public function getQuery();
 }

@@ -15,6 +15,7 @@ abstract class AbstractRequestBuilder
     protected $options = [];
     protected $method = 'GET';
     protected $query;
+    protected $finalQuery;
     protected $api;
 
     const ALLOWED_METHODS = [
@@ -241,7 +242,7 @@ abstract class AbstractRequestBuilder
      */
     public function getQuery()
     {
-        return $this->query;
+        return $this->finalQuery;
     }
     
     /**
@@ -271,11 +272,12 @@ abstract class AbstractRequestBuilder
         }
         return $this;
     }
+    
     /**
      * Create final request query
      */
     public function create()
     {
-        $this->query = $this->baseUrl.$this->api.$this->query;
+        $this->finalQuery = $this->baseUrl.$this->api.$this->query;
     }
 }
